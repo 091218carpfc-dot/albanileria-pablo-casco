@@ -1,2 +1,254 @@
-index.html
-1000007057.jpg, 1000007055.jpg, 1000007054.jpg, 1000007071.gif y video_1.mp4)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albañilería Pablo Casco | Construcción y Refacciones</title>
+  <style>
+    :root {
+      --color-primario: #0F2942;
+      --color-secundario: #1E40AF;
+      --color-acento: #FF6B00;
+      --color-whatsapp: #25D366;
+      --fondo-pagina: #F8FAFC;
+      --fondo-tarjeta: #FFFFFF;
+      --texto-principal: #1E293B;
+      --texto-secundario: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--fondo-pagina);
+      color: var(--texto-principal);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 36px 20px 44px;
+      border-bottom: 5px solid var(--color-acento);
+    }
+
+    .marco-logo {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      border: 4px solid var(--color-acento);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
+      background: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #E2E8F0;
+      max-width: 520px;
+      margin: 0 auto 22px;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: var(--color-whatsapp);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    .contenedor {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+
+    .titulo-seccion {
+      text-align: center;
+      color: var(--color-primario);
+      font-size: 1.5rem;
+      margin: 32px 0 20px;
+    }
+
+    .titulo-seccion::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: var(--color-acento);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .grid-servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .tarjeta-servicio {
+      background: var(--fondo-tarjeta);
+      padding: 20px;
+      border-radius: 14px;
+      border-left: 5px solid var(--color-acento);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .tarjeta-servicio h3 {
+      color: var(--color-primario);
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .tarjeta-servicio p {
+      color: var(--texto-secundario);
+      font-size: 0.95rem;
+    }
+
+    .grid-fotos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .marco-polaroid {
+      background: var(--fondo-tarjeta);
+      padding: 10px 10px 16px;
+      border-radius: 14px;
+      border-bottom: 5px solid var(--color-acento);
+      box-shadow: 0 8px 20px rgba(15, 41, 66, 0.12);
+      text-align: center;
+    }
+
+    .marco-polaroid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .marco-polaroid p {
+      font-weight: bold;
+      color: var(--color-primario);
+      font-size: 0.95rem;
+    }
+
+    .marco-video {
+      max-width: 650px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 4px solid var(--color-primario);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background: #000000;
+    }
+
+    .marco-video video {
+      width: 100%;
+      display: block;
+    }
+
+    .whatsapp-flotante {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background-color: var(--color-whatsapp);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+      font-size: 0.95rem;
+      z-index: 999;
+    }
+
+    footer {
+      background-color: var(--color-primario);
+      color: #CBD5E1;
+      text-align: center;
+      padding: 25px 15px 75px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Albañilería Pablo Casco" class="marco-logo" onerror="this.style.display='none'">
+    <h1>Albañilería Pablo Casco</h1>
+    <p>Construcción en general, refacciones, revoques, colocación de pisos y trabajos garantizados.</p>
+    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20Pablo,%20quisiera%20pedir%20un%20presupuesto" class="btn-whatsapp" target="_blank">
+      Pedir Presupuesto por WhatsApp
+    </a>
+  </header>
+
+  <main class="contenedor">
+
+    <h2 class="titulo-seccion">Nuestros Servicios</h2>
+    <div class="grid-servicios">
+      <div class="tarjeta-servicio">
+        <h3>Obra Nueva y Ampliaciones</h3>
+        <p>Levantamiento de paredes, losas, encadenados y estructuras sólidas desde cero.</p>
+      </div>
+      <div class="tarjeta-servicio">
+        <h3>Revoques y Terminaciones</h3>
+        <p>Revoque grueso, fino, salpicado y nivelación prolija de muros interiores y exteriores.</p>
+      </div>
+      <div class="tarjeta-servicio">
+        <h3>Pisos y Revestimientos</h3>
+        <p>Colocación de cerámicos, porcelanatos, carpetas y refacciones de baños y cocinas.</p>
+      </div>
+    </div>
+
+    <h2 class="titulo-seccion">Trabajos Realizados</h2>
+    <div class="grid-fotos">
+      <div class="marco-polaroid">
+        <img src="1000007057.jpg" alt="Trabajo de albañilería 1" onerror="this.parentElement.style.display='none'">
+        <p>Ampliación y revoque terminado</p>
+      </div>
+
+      <div class="marco-polaroid">
+        <img src="1000007055.jpg" alt="Trabajo de albañilería 2" onerror="this.parentElement.style.display='none'">
+        <p>Colocación de pisos y revestimientos</p>
+      </div>
+
+      <div class="marco-polaroid">
+        <img src="1000007054.jpg" alt="Trabajo de albañilería 3" onerror="this.parentElement.style.disp
+    </div>
+
+    <h2 class="titulo-seccion">Obra en Proceso</h2>
+    <div class="marco-video">
+      <video src="video-obra.mp4" controls playsinline onerror="this.parentElement.style.display='none'"></video>
+    </div>
+
+  </main>
+
+  <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20Pablo,%20quisiera%20pedir%20un%20presupuesto" class="whatsapp-flotante" target="_blank">
+    WhatsApp
+  </a>
+
+  <footer>
+    <p><strong>Albañilería Pablo Casco</strong> — Presupuestos sin cargo</p>
+    <p>Mercedes, Buenos Aires | © 2026</p>
+  </footer>
+
+</body>
+</html>
